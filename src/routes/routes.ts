@@ -11,9 +11,9 @@ interface Route {
 }
 
 // Import lazy components should be exported as default 
-const Lazy1 = lazy(() => import("../01-lazyload/pages/LazyPage1"));
-const Lazy2 = lazy(() => import("../01-lazyload/pages/LazyPage2"));
-const Lazy3 = lazy(() => import("../01-lazyload/pages/LazyPage3"));
+const Lazy1 = lazy(() => import(/* webpackChunckName: "LazyPage1" */ '../01-lazyload/pages/LazyPage1'));
+const Lazy2 = lazy(() => import(/* webpackChunckName: "LazyPage2" */ '../01-lazyload/pages/LazyPage2'));
+const Lazy3 = lazy(() => import(/* webpackChunckName: "LazyPage3" */ '../01-lazyload/pages/LazyPage3'));
 
 export const routes: Route[] = [
     {
